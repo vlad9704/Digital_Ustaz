@@ -20,11 +20,11 @@ body {
 @media (max-width: 767px) {
 body {
     background: url("../images/gr.png") no-repeat left 290px,url("../images/gradient/gradient-home.png") no-repeat center top;
-	background-size: 100%;	
+	background-size: 100%;
 }
     body::before {
       top: 0;
-      height: 100%;}	
+      height: 100%;}
 }
 
 .tagline-content {
@@ -43,7 +43,7 @@ body {
       -ms-flex-positive: 1;
           flex-grow: 1;
   min-width: 1px;
-  padding-top: 102px; 
+  padding-top: 102px;
 }
 
 .tagline-block__logo {
@@ -136,7 +136,7 @@ body {
   position: relative;
   width: 499px;
   padding-top: 10px;
-  margin-right: 0	px; }
+  margin-right: 0px; }
 
 .tagline-block__right--img {
   padding-bottom: 118.667%;
@@ -150,7 +150,7 @@ body {
 	z-index: -10;
     -o-object-fit: contain;
        object-fit: contain; }
-@media (max-width:  767px) {	   
+@media (max-width:  767px) {
   .tagline-block__right--img img {
     position: absolute;
     height: 160%;
@@ -312,7 +312,7 @@ body {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-	
+
   .tagline-title {
     font-size: 26px;
     line-height: 28px;
@@ -558,7 +558,7 @@ body {
   padding: 29px 65px 29px 29px;
   z-index: 2; }
   .stage-block__wrap.stage--left {
-	      -webkit-box-shadow: 0px 0px 40px rgba(99, 36, 255, 0.43);	
+	      -webkit-box-shadow: 0px 0px 40px rgba(99, 36, 255, 0.43);
        -moz-box-shadow: 0px 0px 40px rgba(99, 36, 255, 0.43);
             box-shadow: 0px 0px 40px rgba(99, 36, 255, 0.43);
     }
@@ -577,7 +577,7 @@ body {
   float: left;}
 .stage-block__img--big {
   width: 380px;
-  display: block;	
+  display: block;
   -webkit-border-radius: 25px;
      -moz-border-radius: 25px;
           border-radius: 25px; }
@@ -631,8 +631,8 @@ body {
   width: 650px;
   display: block;
   margin-left: 45px;
-  margin-top: 21px; 	
-	
+  margin-top: 21px;
+
 }
 @media (max-width: 767px) {
 	.stage-block__body {
@@ -640,8 +640,8 @@ body {
   width: 90%;
   display: block;
   margin-left: 0;
-  margin-top: 0; 	
-	
+  margin-top: 0;
+
 }
 .speakers-card__info{
 	display:none;
@@ -652,7 +652,7 @@ body {
 }
 .stage-block__title {
 	  font: bold 24px/33px "Montserrat", sans-serif;
-	  font-weight: 600;f
+	  font-weight: 600;
   color: #373333; }
 
 .stage-block__list li {
@@ -836,15 +836,15 @@ body {
   padding-left: 59px; }
 .speakers-left_title {
   z-index: 10;
-  position: relative;  
+  position: relative;
   font: bold 27px/33px "Montserrat", sans-serif;
-  color: #6324FF; 
+  color: #6324FF;
   margin-bottom: 33px;
   width: 100%;
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
-  padding-right: -10	px; }
+  padding-right: -10px; }
 .speakers-card {
   min-height: 400px;
   padding: 0px;
@@ -909,7 +909,7 @@ body {
   z-index: 2; }
 
 .speakers-card__info--title {
-  width:50%;	
+  width:50%;
   font: bold 24px/29px "Montserrat", sans-serif;
   color: #000;
   margin-bottom: 15px; }
@@ -925,7 +925,7 @@ body {
 
 .speakers-card__info--theme {
   font: bold 22px/27px "Montserrat", sans-serif;
-  color: #6324FF; 
+  color: #6324FF;
   margin-bottom: 33px;}
 
 .speakers-card__info-top {
@@ -1119,7 +1119,7 @@ body {
   margin-bottom: 150px; }
   @media (min-width: 1024px) {
     .participant-container::before {
-	 top: 0px;	
+	 top: 0px;
       content: "";
       display: block;
       position: absolute;
@@ -1134,7 +1134,7 @@ body {
     display: inline-block;
     position: relative;
   background: #6F35FF !important;
-  color: #fff !important; 
+  color: #fff !important;
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
@@ -1500,8 +1500,8 @@ body {
 .prizes-content__left-block--img {
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
-          flex-shrink: 0; }
- }
+          flex-shrink: 0;
+}
 
 .prizes-content__left-block--circle {
   -webkit-flex-shrink: 0;
@@ -1857,7 +1857,7 @@ html:not(.is-touch) .advice-btn:active {
   background: #4C29D3;
   -webkit-border-radius: 40px;
      -moz-border-radius: 40px;
-          border-radius: 40px;		
+          border-radius: 40px;
   padding: 49px 70px 66px;
   overflow: hidden; }
   @media (min-width: 768px) {

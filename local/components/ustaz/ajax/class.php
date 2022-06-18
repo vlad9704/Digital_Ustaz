@@ -608,6 +608,43 @@ class AjaxComponent extends CBitrixComponent implements Controllerable
         ];
     }
 
+	/**
+	 * Измениния типа участника
+	*/
+	public function updateMemberTypeAction($uf_member_type)
+	{
+		//Поля пользователя для обновления профиля
+		$arFields = [];
+		switch ($uf_member_type) {
+			case 'USER_PROFILE_OPTION_PERSON_TYPE_MEMBER':
+				// Участник
+				$arFields['UF_MEMBER_TYPE'] = 'USER_PROFILE_OPTION_PERSON_TYPE_MEMBER';
+				break;
+			case 'USER_PROFILE_OPTION_PERSON_TYPE_LISTENER':
+				// Слушатель
+				$arFields['UF_MEMBER_TYPE'] = 'USER_PROFILE_OPTION_PERSON_TYPE_LISTENER';
+				break;
+		}
+
+		//Проводим обновление данных пользователя
+		$user = new CUser;
+		if($user->Update($GLOBALS["USER"]->GetId(), $arFields))
+		{
+			$response['status'] = true;
+			$response['message'][] = 'Тип участника изменен';
+		}
+		else
+		{
+			$response['status'] = false;
+			$response['message'][] = $user->LAST_ERROR;
+		}
+
+		return [
+			'status' => $response['status'],
+			'message' => implode('<br>', $response['message']),
+		];
+	}
+
     /**
      * Конкурс. Отправка работ с привязкой к Этапу.
      */

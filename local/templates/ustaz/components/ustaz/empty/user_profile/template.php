@@ -145,6 +145,28 @@ Loc::loadMessages(__FILE__);
                                                                for="shoolType2"><?= Loc::getMessage('USER_PROFILE_OPTION_SCHOOL_COM_NEGOS') ?></label>
                                                     </div>
                                                 </div>
+												<div class="form-group__col">
+													<div class="form-control">
+														<input class="form-radio j_change_member_type" type="radio"
+															   name="data[uf_member_type]" id="memberType1"
+															   value="USER_PROFILE_OPTION_PERSON_TYPE_MEMBER" <? if ($arResult['user']['UF_MEMBER_TYPE'] == 'USER_PROFILE_OPTION_PERSON_TYPE_MEMBER') {
+															echo ' checked';
+														} ?>>
+														<label class="form-radio__label"
+															   for="memberType1"><?= Loc::getMessage('USER_PROFILE_OPTION_SCHOOL_MEMBER') ?></label>
+													</div>
+												</div>
+												<div class="form-group__col">
+													<div class="form-control">
+														<input class="form-radio j_change_member_type" type="radio"
+															   name="data[uf_member_type]" id="memberType2"
+															   value="USER_PROFILE_OPTION_PERSON_TYPE_LISTENER" <? if ($arResult['user']['UF_MEMBER_TYPE'] == 'USER_PROFILE_OPTION_PERSON_TYPE_LISTENER') {
+															echo ' checked';
+														} ?>>
+														<label class="form-radio__label"
+															   for="memberType2"><?= Loc::getMessage('USER_PROFILE_OPTION_SCHOOL_LISTENER') ?></label>
+													</div>
+												</div>
                                             </div>
                                             <div class="form-group__row">
                                                 <div class="form-group__col group-col--w50">

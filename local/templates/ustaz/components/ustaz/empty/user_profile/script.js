@@ -200,6 +200,29 @@ $.fn.checkFile = function (params, dontScroll) {
     return true;
 }
 
+$(document).ready(function ()
+{
+	if( $('.j_profile-tab__item_precent').length && $('#memberType1').is(':checked') )
+		$('.j_profile-tab__item_precent').addClass('no_active')
+
+	$('body').on('change', '.j_change_member_type', function ()
+	{
+		// меняем тип участника (слушатель / участник)
+		BX.ajax.runComponentAction('ustaz:ajax', 'updateMembertype', {
+			mode: 'class',
+			data: {
+				uf_member_type: $(this).val()
+			}
+		})
+
+		// Активируем / деактивируем вкладку "Конкурс" в зависимости от типа участника
+		if( $(this).val() == 'USER_PROFILE_OPTION_PERSON_TYPE_LISTENER' && $(this).prop('checked') )
+			$('.j_profile-tab__item_precent').addClass('no_active')
+		else
+			$('.j_profile-tab__item_precent').removeClass('no_active')
+	})
+})
+
 
 
 

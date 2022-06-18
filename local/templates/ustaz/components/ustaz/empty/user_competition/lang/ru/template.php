@@ -1,0 +1,33 @@
+<?php
+$MESS["USER_COMPETITION_STAGE1_NAME"] = '1 этап';
+$MESS["USER_COMPETITION_STAGE1_TITLE"] = 'Разработка «Мультимедийной статьи» на тему: <br> «Как создать эффективную цифровую среду обучения»';
+$MESS["USER_COMPETITION_STAGE1_TEXT"] = 'Пожалуйста, разместите ссылку на разработанную статью. Убедитесь, что ссылка является открытой (доступной для прочтения).';
+$MESS["USER_COMPETITION_STAGE2_NAME"] = '2 этап';
+$MESS["USER_COMPETITION_STAGE2_TITLE"] = 'Разработка урока с использованием цифровых инструментов';
+$MESS["USER_COMPETITION_STAGE2_TEXT"] = 'Пожалуйста, разместите ссылку на разработанный урок. Убедитесь, что ссылка является открытой (доступной для прочтения).';
+$MESS["USER_COMPETITION_STAGE3_NAME"] = '3 этап';
+$MESS["USER_COMPETITION_STAGE3_TITLE"] = 'Разработка мастер-класса на тему: «Как создать эффективную цифровую среду обучения»';
+$MESS["USER_COMPETITION_BUTTON_COUNTDOWN"] = 'до завершения этапа осталось';
+$MESS["USER_COMPETITION_STAGE_APPROVE"] = 'Задание находится на проверке у эксперта';
+$MESS["USER_COMPETITION_STAGE_LINK_ARTICLE"] = 'Ссылка на мультимедийную статью';
+$MESS["USER_COMPETITION_STAGE_LINK_LESSON"] = 'Ссылка на разработанный урок';
+$MESS["USER_COMPETITION_STAGE_COMMENT"] = 'Комментарий участника';
+$MESS["USER_COMPETITION_STAGE_APPROVED"] = "Эксперт проверил задание";
+$MESS["USER_COMPETITION_CERT_DOWNLOAD"] = "Скачать сертификат";
+$MESS["USER_COMPETITION_BUTTON_SEND"] = 'Отправить';
+$MESS["USER_COMPETITION_BUTTON_SENDED"] = 'Отправлено';
+$MESS["USER_COMPETITION_ARTICLE_PLACEHOLDER"] = 'Вставьте в поле URL (ссылку) на вашу статью';
+$MESS["USER_COMPETITION_COMMENT_PLACEHOLDER"] = 'Добавьте комментарий к выполненному заданию';
+$MESS["USER_COMPETITION_STAGE_COMPLETED"] = 'Этап завершен';
+$MESS["RESULTS"] = "Результаты";
+$MESS["STAGE_1_NC"] = "Нам очень жаль, но Вы не прошли во второй этап.
+                                                         Ждем Вас в следующем году, а пока повышайте свои цифровые навыки вместе с нами и участвуйте в вебинарах наравне с потенциальными победителями.";
+$MESS["STAGE_1_C"] = "Вы прошли на 2 этап";
+$MESS["STAGE_3_RATINGS"] = "Оценки 3 этапа";
+$MESS["MASTER_CLASS"] = "Мастер-класс - ";
+$MESS["SPEECH"] = "Мотивационная речь - ";
+$MESS["RATING_FINAL"] = "Итоговая оценка - ";
+$MESS["STAGE_3_RATINGS"] = "Оценки 3 этапа";
+$MESS["MASTER_CLASS"] = "Мастер-класс - ";
+$MESS["SPEECH"] = "Мотивационная речь - ";
+$MESS["RATING_FINAL"] = "Итоговая оценка - ";

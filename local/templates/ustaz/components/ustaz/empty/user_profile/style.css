@@ -1,0 +1,6 @@
+.j_profile-tab__item_precent.no_active {
+	pointer-events: none;
+}
+.j_profile-tab__item_precent.no_active span {
+	opacity: 0.2;
+}

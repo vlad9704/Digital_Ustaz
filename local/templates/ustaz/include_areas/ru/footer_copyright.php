@@ -1,0 +1,1 @@
+© 2022, Digital Ustaz Almaty. Все права защищены.

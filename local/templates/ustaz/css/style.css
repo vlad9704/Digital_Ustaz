@@ -1,0 +1,51 @@
+@media screen and (min-width: 1280px) {
+	body {
+		background-size: 100% 950px;
+	}
+	.container {
+		width: 100% !important;
+		padding: 0 20px;
+	}
+	.header-panel {
+		left: -110px;
+	}
+	.participant-container::before {
+		background-size: cover;
+	}
+	.stages-container {
+		margin-top: 110px;
+	}
+	.main-labels__content .slick-list {
+		margin: 0 auto;
+	}
+	.stage-block {
+		justify-content: center;
+	}
+	.stages-content__title,
+	.participant-content__title,
+	.participant-action,
+	.advice-content__title,
+	.organizers-block__title,
+	.speakers-content__title,
+	.intensive-programm h2,
+	.intensive-goals h2,
+	.finalists-competition h2 {
+		text-align: center;
+	}
+	.participant-content {
+		justify-content: center;
+	}
+	.final-competition__internship-right {
+		margin-right: 0;
+	}
+	.intensive-programm__action {
+		text-align: center;
+		padding-left: 0;
+	}
+}
+.calendar_events_block {
+	margin-top: 40px;
+}
+.calendar_events_block h2 {
+	text-align: center;
+}

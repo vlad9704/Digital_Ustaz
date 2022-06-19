@@ -79,6 +79,7 @@ $asset->addJs(SITE_TEMPLATE_PATH . '/custom.js');//Потом вынести в 
 
 $asset->addCss(STATIC_PATH .  'css/main.css?v1.1');
 $asset->addCss(STATIC_PATH .  'css/jquery.fancybox.min.css');
+$asset->addCss(SITE_TEMPLATE_PATH.'/css/style.css');
 
 ?>
 <!DOCTYPE html>

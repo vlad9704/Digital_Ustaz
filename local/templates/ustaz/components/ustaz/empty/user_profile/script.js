@@ -202,7 +202,7 @@ $.fn.checkFile = function (params, dontScroll) {
 
 $(document).ready(function ()
 {
-	if( $('.j_profile-tab__item_precent').length && $('#memberType1').is(':checked') )
+	if( $('.j_profile-tab__item_precent').length && $('#memberType2').is(':checked') )
 		$('.j_profile-tab__item_precent').addClass('no_active')
 
 	$('body').on('change', '.j_change_member_type', function ()

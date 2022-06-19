@@ -312,15 +312,15 @@
 						<div class="participant-action"><a class="participant-button btn-blue btn-blue-shadow link-scroll btn-blue btn-blue-shadow link-scroll" href="<?=($USER->IsAuthorized() ? '/ru/personal/profile/' : '#frmRegister') ?>"><?=GetMessage('REGISTER')?></a></div>
                     
                        </div>
-                    <div class="participant-content__right">
-                        <div class="participant-content__right--img">
-						<picture>
-                                    
-									<source media="(max-width: 767px)" type="image/png" srcset="<?= INCLUDE_PATH ?>images/grmob.png"><img class="lazyload" data-src="<?= INCLUDE_PATH ?>images/simple.png" alt="#" loading="lazy">								    </picture>
-                            
-                        </div>
-                        <div class="participant-action"></div>
-                    </div>
+<!--                    <div class="participant-content__right">-->
+<!--                        <div class="participant-content__right--img">-->
+<!--						<picture>-->
+<!--                                    -->
+<!--									<source media="(max-width: 767px)" type="image/png" srcset="--><?//= INCLUDE_PATH ?><!--images/grmob.png"><img class="lazyload" data-src="--><?//= INCLUDE_PATH ?><!--images/simple.png" alt="#" loading="lazy">								    </picture>-->
+<!--                            -->
+<!--                        </div>-->
+<!--                        <div class="participant-action"></div>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>

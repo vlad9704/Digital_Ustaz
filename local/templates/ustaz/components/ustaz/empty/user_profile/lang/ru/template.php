@@ -1,4 +1,5 @@
 <?php
+$MESS["CALENDAR_EVENTS"] = "Календарь событий";
 $MESS["USER_PROFILE_AVATAR_UPLOAD"] = "Загрузите фото";
 $MESS["USER_PROFILE_TITLE_MYDATA"] = "Личные данные";
 $MESS["USER_PROFILE_TITLE_PROFDATA"] = "Профессиональная деятельность";

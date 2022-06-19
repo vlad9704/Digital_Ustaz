@@ -410,6 +410,41 @@ Loc::loadMessages(__FILE__);
                                 </div>
                             </form>
                         </div>
+						<div class="calendar_events_block">
+							<h2 class="calenar_events"><?= Loc::getMessage('CALENDAR_EVENTS') ?></h2>
+							<?$APPLICATION->IncludeComponent(
+								"bitrix:news.calendar",
+								"",
+								Array(
+									"AJAX_MODE" => "Y",
+									"AJAX_OPTION_ADDITIONAL" => "",
+									"AJAX_OPTION_HISTORY" => "Y",
+									"AJAX_OPTION_JUMP" => "N",
+									"AJAX_OPTION_STYLE" => "Y",
+									"CACHE_TIME" => "36000000",
+									"CACHE_TYPE" => "A",
+									"COMPOSITE_FRAME_MODE" => "A",
+									"COMPOSITE_FRAME_TYPE" => "AUTO",
+									"DATE_FIELD" => "DATE_ACTIVE_FROM",
+									"DETAIL_URL" => "",
+									"FILTER_NAME" => "",
+									"IBLOCK_ID" => "18",
+									"IBLOCK_TYPE" => "intensive",
+									"LIST_URL" => "",
+									"MONTH_VAR_NAME" => "month",
+									"NEWS_COUNT" => "0",
+									"SET_TITLE" => "Y",
+									"SHOW_CURRENT_DATE" => "Y",
+									"SHOW_MONTH_LIST" => "Y",
+									"SHOW_TIME" => "Y",
+									"SHOW_YEAR" => "Y",
+									"TITLE_LEN" => "0",
+									"TYPE" => "EVENTS",
+									"WEEK_START" => "1",
+									"YEAR_VAR_NAME" => "year"
+								)
+							);?>
+						</div>
                     </div>
                 </div>
             </div>

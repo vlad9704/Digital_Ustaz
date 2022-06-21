@@ -3,6 +3,9 @@
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 
 use Bitrix\Main\Localization\Loc;
+use Bitrix\Main\Loader;
+
+Loader::includeModule('iblock');
 
 Loc::loadMessages(str_replace('result_modifier.php', 'template.php', __FILE__));
 $messages = Loc::loadLanguageFile(str_replace('result_modifier.php', 'template.php', __FILE__));
@@ -87,7 +90,17 @@ if (isset($arResult['user']['PERSONAL_PHOTO']) && $arResult['user']['PERSONAL_PH
 $arResult['user']['UF_FILE_PROFDOC_ARRAY'] = CFile::GetFileArray($arResult['user']['UF_FILE_PROFDOC']);
 $arResult['user']['UF_EXPERIENCE_ARRAY'] = CFile::GetFileArray($arResult['user']['UF_EXPERIENCE']);
 
+// Достанем список школ
+$res = CIBlockElement::GetList(['SORT' => 'ASC'], ['IBLOCK_ID' => 28, 'ACTIVE' => 'Y'], false, false, ['ID', 'NAME']);
+while ($ob = $res->fetch())
+	$arResult['SCHOOL'][] = $ob;
+unset($res, $ob);
 
+// Достанем предметы по ГОСО
+$res = CIBlockElement::GetList(['SORT' => 'ASC'], ['IBLOCK_ID' => 29, 'ACTIVE' => 'Y'], false, false, ['ID', 'NAME']);
+while ($ob = $res->fetch())
+	$arResult['SUBJECTS'][] = $ob;
+unset($res, $ob);
 
 
 

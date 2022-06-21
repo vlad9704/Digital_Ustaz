@@ -105,10 +105,16 @@ Loc::loadMessages(__FILE__);
                                             <div class="form-group__row">
                                                 <div class="form-group__col group-col--w50">
                                                     <div class="form-control">
-                                                        <input class="form-input" type="text"
-                                                               placeholder="<?= Loc::getMessage('USER_PROFILE_PLACEHOLDERS_SCHOOL') ?>"
-                                                               name="data[uf_school]"
-                                                               value="<?= $arResult['user']['UF_SCHOOL'] ?>">
+														<select class="select-multiple select-style select_school_type"
+																data-placeholder="<?= Loc::getMessage('USER_PROFILE_PLACEHOLDERS_SCHOOL') ?>"
+																name="data[uf_school]">
+															<option value="<?= Loc::getMessage('USER_PROFILE_PLACEHOLDERS_SCHOOL') ?>"><?= Loc::getMessage('USER_PROFILE_PLACEHOLDERS_SCHOOL') ?></option>
+															<?foreach ($arResult['SCHOOL'] as $item):?>
+																<option value="<?=htmlspecialchars($item['NAME'])?>" <?=$arResult['user']['UF_SCHOOL'] == $item['NAME'] ? 'selected' : ''?>>
+																	<?=$item['NAME']?>
+																</option>
+															<?endforeach;?>
+														</select>
                                                     </div>
                                                 </div>
                                                 <div class="form-group__col group-col--w50">
@@ -223,10 +229,16 @@ Loc::loadMessages(__FILE__);
                                                         } ?>><?= $value ?></option>
 																	<? } ?>
 																</select-->
-                                                        <input class="form-input" type="text"
-                                                               placeholder="<?= Loc::getMessage('USER_PROFILE_SELECT_SCHOOL_SPECIALTY_TITLE') ?>"
-                                                               name="data[uf_specialty]"
-                                                               value="<?= $arResult['user']['UF_SPECIALTY'] ?>">
+														<select class="select-multiple select-style select_subject_type"
+																data-placeholder="<?= Loc::getMessage('USER_PROFILE_SELECT_SCHOOL_SPECIALTY_TITLE') ?>"
+																name="data[uf_specialty]">
+															<option value="<?= Loc::getMessage('USER_PROFILE_SELECT_SCHOOL_SPECIALTY_TITLE') ?>"><?= Loc::getMessage('USER_PROFILE_SELECT_SCHOOL_SPECIALTY_TITLE') ?></option>
+															<?foreach ($arResult['SUBJECTS'] as $item):?>
+																<option value="<?=htmlspecialchars($item['NAME'])?>" <?=$arResult['user']['UF_SPECIALTY'] == $item['NAME'] ? 'selected' : ''?>>
+																	<?=$item['NAME']?>
+																</option>
+															<?endforeach;?>
+														</select>
                                                     </div>
                                                     <div class="form-control form-group__control">
                                                         <input class="form-input" type="text"

@@ -9,7 +9,7 @@ $programs = [];
 
 foreach ($arResult['ITEMS'] as $item){
     $props = $item['PROPERTIES'];
-    $timestamp = MakeTimeStamp($props['DATETIME']['VALUE']);
+    $timestamp = MakeTimeStamp($item['ACTIVE_FROM']);
     $date = FormatDate('d F', $timestamp);
 
     if (!isset($programs[$date])){

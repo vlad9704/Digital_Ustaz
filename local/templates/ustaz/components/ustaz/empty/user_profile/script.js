@@ -27,8 +27,10 @@ $(document).on('submit', '#formUserProfile', function (e) {
         data: formData
     });
 
+	$('.wrapper').addClass('custom_loader')
+	
     request.then(function (successResult) {
-        if (successResult.data.status === 'ok') {
+		if (successResult.data.status === 'ok') {
             window.location.reload();
         } else {
             //$('.form-group__error-block').html(successResult.data.message).show();
@@ -37,9 +39,11 @@ $(document).on('submit', '#formUserProfile', function (e) {
             addFieldsError(successResult.data.fields);
 
         }
-        //console.log(successResult);
+		$('.wrapper').removeClass('custom_loader')
+		//console.log(successResult);
     }, function (errorResult) {
-        //console.log(successResult);
+		$('.wrapper').removeClass('custom_loader')
+		//console.log(successResult);
     });
 
     //$('input[name="data\[name\]"').get(0).scrollIntoView({block: "center", behavior: "smooth"});

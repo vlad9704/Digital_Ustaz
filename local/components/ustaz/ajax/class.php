@@ -368,11 +368,14 @@ class AjaxComponent extends CBitrixComponent implements Controllerable
         }
 
         //Название и номер школы
-        if (isset($data['uf_school']) === false || mb_strlen($data['uf_school']) < 1 || mb_strlen($data['uf_school']) > 150) {
-            $feedback['status'] = 'error';
-            $feedback['fileds'][] = 'uf_school';
-        } else {
-            $arFields['UF_SCHOOL'] = $data['uf_school'];
+        if ($data['uf_school'])
+		{
+			$arFields['UF_SCHOOL'] = $data['uf_school'];
+        }
+		else
+		{
+			$feedback['status'] = 'error';
+			$feedback['fileds'][] = 'uf_school';
         }
 
         //Район
@@ -426,11 +429,14 @@ class AjaxComponent extends CBitrixComponent implements Controllerable
         }
 
         //Ваша специализация
-        if (isset($data['uf_specialty']) === false || mb_strlen($data['uf_specialty']) < 1 || mb_strlen($data['uf_specialty']) > 150) {
-            $feedback['status'] = 'error';
-            $feedback['fileds'][] = 'uf_specialty';
-        } else {
-            $arFields['UF_SPECIALTY'] = $data['uf_specialty'];
+        if ($data['uf_specialty'])
+		{
+			$arFields['UF_SPECIALTY'] = $data['uf_specialty'];
+        }
+		else
+		{
+			$feedback['status'] = 'error';
+			$feedback['fileds'][] = 'uf_specialty';
         }
 
         //Язык преподавания

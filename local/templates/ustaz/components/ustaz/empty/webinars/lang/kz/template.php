@@ -13,3 +13,4 @@ $MESS["MONTH_9_S"] = "қыркүйек";
 $MESS["MONTH_10_S"] = "қазан";
 $MESS["MONTH_11_S"] = "қараша";
 $MESS["MONTH_12_S"] = "желтоқсан";
+$MESS["DOWNLOAD_PRESENTATION"] = "Презентацияны жүктеу";

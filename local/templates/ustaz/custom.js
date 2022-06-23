@@ -111,4 +111,9 @@ $(document).ready(function () {
     })
     
     //Модалка Задать вопрос
+
+	// toggle видео в "Образовательные интенсивы"
+	$(document).on('click', '.j_btn_toggle_video', function () {
+		$(this).closest('.j_profile-intensive__block').find('.j_profile-intensive-video').toggle(300)
+	})
 });

@@ -59,9 +59,12 @@ while ($element = $elementRes->GetNext()){
         $element['LINK'] = $element['PROPERTIES']['zoom']['VALUE'];;
         $element['BUTTON_TEXT'] = Loc::getMessage('BUTTON_CONNECT');
     } else {
-        $element['LINK'] = $element['PROPERTIES'][strtolower('youtube_'.SITE_ID)]['VALUE'];
+        $element['VIDEO'] = $element['PROPERTIES'][strtolower('youtube_'.SITE_ID)]['~VALUE']['TEXT'];
         $element['BUTTON_TEXT'] = Loc::getMessage('BUTTON_VIEW');
     }
+
+	//Получим св-во "Презентация от спикера"
+	$element['PRESENTATION'] = CFile::GetPath($element['PROPERTIES'][strtoupper('PRESENTATION_'.SITE_ID)]['VALUE']);
 
     //Форматируем дату
     $element['FORMATED_DATE'] = FormatDate('d F Y', MakeTimeStamp($element['PROPERTIES']['date']['VALUE']));

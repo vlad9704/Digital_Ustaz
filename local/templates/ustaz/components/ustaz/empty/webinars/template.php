@@ -15,7 +15,7 @@ $this->setFrameMode(true);
 <?php if ($arResult['ITEMS']): ?>
     <div class="profile-intensive">
         <?php foreach ($arResult["ITEMS"] as $arItem): ?>
-            <div class="profile-intensive__block">
+            <div class="profile-intensive__block j_profile-intensive__block">
                 <div class="profile-intensive__left">
                     <div class="profile-intensive__type"><?= $arItem['PROPERTIES']['type']['VALUE_ENUM'] ?></div>
                     <div class="profile-intensive__title">
@@ -23,8 +23,16 @@ $this->setFrameMode(true);
                     </div>
                     <div class="profile-intensive__date"><?= $arItem['FORMATED_DATE'] ?> </div>
                     <div class="profile-intensive__action">
-                        <a class="btn btn-white" href="/redirect.php?id=<?= $arItem['ID'] ?>&lang=<?= SITE_ID ?>"
-                           target="_blank"><?= $arItem['BUTTON_TEXT'] ?></a>
+					<?if($arItem['VIDEO']):?>
+						<a class="btn btn-white j_btn_toggle_video" href="javascript:void(0)"><?= $arItem['BUTTON_TEXT'] ?></a>
+					<?else:?>
+						<a class="btn btn-white" href="/redirect.php?id=<?= $arItem['ID'] ?>&lang=<?= SITE_ID ?>" target="_blank"><?= $arItem['BUTTON_TEXT'] ?></a>
+					<?endif;?>
+					<?if($arItem['PRESENTATION']):?>
+						<div class="presentation_block">
+							<a class="btn btn-white" href="<?=$arItem['PRESENTATION']?>" download=""><?=GetMessage('DOWNLOAD_PRESENTATION')?></a>
+						</div>
+					<?endif;?>
                     </div>
                 </div>
                 <div class="profile-intensive__right">
@@ -36,7 +44,10 @@ $this->setFrameMode(true);
                         <div class="profile-intensive__speaker--city"><?= $arItem['SPEAKER']['speaker_town_' . SITE_ID] ?></div>
                     </div>
                 </div>
-            </div>
+				<div class="profile-intensive-video j_profile-intensive-video">
+					<?=$arItem['VIDEO']?>
+				</div>
+			</div>
         <?php endforeach; ?>
     </div>
 <?php endif; ?>

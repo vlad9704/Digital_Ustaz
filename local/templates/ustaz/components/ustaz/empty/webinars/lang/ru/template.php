@@ -13,3 +13,4 @@ $MESS["MONTH_9_S"] = "сентября";
 $MESS["MONTH_10_S"] = "октября";
 $MESS["MONTH_11_S"] = "ноября";
 $MESS["MONTH_12_S"] = "декабря";
+$MESS["DOWNLOAD_PRESENTATION"] = "Скачать презентацию";

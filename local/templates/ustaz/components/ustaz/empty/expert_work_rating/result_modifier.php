@@ -128,9 +128,3 @@ $arResult['user_stage'] = @$userStage['VALUE'];
 
 
 
-
-
-
-
-
-

@@ -48,9 +48,10 @@ Loc::loadMessages(__FILE__);
                                             </div>
                                             <div class="contest-block__header-right">
                                                 <div class="contest-tasks">
-                                                    <? if ($arResult['downloadCert']) { ?>
+                                                    <? /*if ($arResult['downloadCert'] ) { ?>
                                                         <a href="/cert?lang=<?=SITE_ID?>" target="_blank" class="btn btn-blue btn-style--1"><?= Loc::getMessage('USER_COMPETITION_CERT_DOWNLOAD') ?></a>
-                                                    <? } elseif (isset($arResult['stages'][1])) { ?>
+                                                    <? } */
+													if (isset($arResult['stages'][1])) { ?>
                                                         <? if ($arResult['stages'][1]['approved']) { ?>
                                                             <div class="contest-tasks__btn is-success"><?= Loc::getMessage('USER_COMPETITION_STAGE_APPROVED') ?></div>
                                                         <? } else { ?>
@@ -139,7 +140,7 @@ Loc::loadMessages(__FILE__);
                                                         </div>
                                                         <div class="form-group__block-action">
                                                             <div class="form-group__block-action__head-btn">
-                                                                <button disabled class="btn btn-blue btn-style--1"
+                                                                <button class="btn btn-blue btn-style--1"
                                                                         type="submit" <? if (isset($arResult['stages'][1]) || in_array($arResult['stage'], DISABLED_STAGES)) {
                                                                     echo ' disabled';
                                                                 } ?>><?= Loc::getMessage('USER_COMPETITION_BUTTON_SEND') ?></button>

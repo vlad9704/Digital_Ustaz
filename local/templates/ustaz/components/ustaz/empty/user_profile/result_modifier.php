@@ -84,7 +84,7 @@ if (isset($arResult['user']['PERSONAL_PHOTO']) && $arResult['user']['PERSONAL_PH
 	$file = CFile::ResizeImageGet($arResult['user']['PERSONAL_PHOTO'], ['width' =>148, 'height'=>148], BX_RESIZE_IMAGE_PROPORTIONAL, true); 
 	$arResult['user']['avatar'] = $file['src'];
 } else {
-	$arResult['user']['avatar'] = STATIC_PATH . 'images/sprites/svg/icon-user-default2.svg';
+	$arResult['user']['avatar'] = '/img_almaty_ustaz/profile_img.svg';
 }
 
 $arResult['user']['UF_FILE_PROFDOC_ARRAY'] = CFile::GetFileArray($arResult['user']['UF_FILE_PROFDOC']);
@@ -101,20 +101,3 @@ $res = CIBlockElement::GetList(['SORT' => 'ASC'], ['IBLOCK_ID' => 29, 'ACTIVE' =
 while ($ob = $res->fetch())
 	$arResult['SUBJECTS'][] = $ob;
 unset($res, $ob);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -422,7 +422,7 @@ Loc::loadMessages(__FILE__);
                                 </div>
                             </form>
                         </div>
-						<div class="calendar_events_block">
+						<?/*<div class="calendar_events_block">
 							<h2 class="calenar_events"><?= Loc::getMessage('CALENDAR_EVENTS') ?></h2>
 							<?$APPLICATION->IncludeComponent(
 								"bitrix:news.calendar",
@@ -456,7 +456,7 @@ Loc::loadMessages(__FILE__);
 									"YEAR_VAR_NAME" => "year"
 								)
 							);?>
-						</div>
+						</div>*/?>
                     </div>
                 </div>
             </div>

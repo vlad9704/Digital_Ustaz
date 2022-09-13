@@ -27,7 +27,7 @@ switch(SITE_ID){
  * Путь до файлов верстки (css, js etc). В будущем будет заменен на CDN 
  * Со слешем на конце.
  */
-define('STATIC_PATH', 'https://static.digitalustazalmaty.kz/');
+define('STATIC_PATH', 'https://static.almatyustazy.kz/');
 
 /**
  * Инфоблоки

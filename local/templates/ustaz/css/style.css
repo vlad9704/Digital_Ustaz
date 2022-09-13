@@ -110,3 +110,31 @@
 		min-width: 530px;
 	}
 }
+
+.speakers-link,
+.speakers-card__img--block {
+	background-size: cover !important;
+}
+
+/*------------------------------------------------------------------------------------------------- ion.rangeSlider.css */
+.quest-card__tooltip-1 {
+	left: 18.5%;
+}
+.quest-card__tooltip-2 {
+	left: 37.5%;
+}
+.quest-card__tooltip-3 {
+	left: 57%;
+}
+.quest-card__tooltip-4 {
+	left: 76%;
+}
+.quest-card__tooltip-5 {
+	left: 95%;
+}
+.irs--round .irs-grid {
+	height: 35px;
+}
+.irs-grid {
+	bottom: -10px;
+}

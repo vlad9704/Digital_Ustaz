@@ -60,19 +60,23 @@ $APPLICATION->SetAdditionalCSS('/local/templates/ustaz/css/ion.rangeSlider.css')
                                             <div class="quest-card__form-block">
                                                 <input data-oldvalue="<?= $criteriaRating['RATING'] ?>"
                                                        name="rating[<?= $criteriaRating['ID'] ?>]"
-                                                       value="<?= $criteriaRating['RATING'] ?>" class="rang-slider"
+                                                       value="1" class="rang-slider"
                                                        type="text" data-step="1"
                                                        data-max="<?= $criteriaRating['MAX_POINTS'] ?>" data-min="0"
-                                                       data-from="<?= $criteriaRating['RATING'] ?>" data-grid="true"
-                                                       data-skin="round" data-grid-num="3">
+                                                       data-from="0" data-grid="true"
+                                                       data-skin="round" data-grid-num="5">
                                                 <?php for ($i = 0; $i <= $criteriaRating['MAX_POINTS']; $i++){ ?>
-                                                    <div class="tooltip quest-card__tooltip quest-card__tooltip-<?=$i+1?>"
-                                                         data-tooltip-content="#tooltip_content_<?= $criteriaRating['ID'] ?>_<?=$i+1?>"></div>
+                                                    <div class="<?=$i?> tooltip quest-card__tooltip quest-card__tooltip-<?=$i?>"
+                                                         data-tooltip-content="#tooltip_content_<?= $criteriaRating['ID'] ?>_<?=$i?>"></div>
                                                 <? } ?>
                                                 <div class="tooltip_templates">
                                                     <?php for ($i = 0; $i <= $criteriaRating['MAX_POINTS']; $i++){ ?>
-                                                        <div id="tooltip_content_<?= $criteriaRating['ID'] ?>_<?=$i+1?>">
-                                                            <?= $criteriaRating['TOOLTIPS'][$i] ?? $criteriaRating['TOOLTIP'] ?>
+                                                        <div id="tooltip_content_<?= $criteriaRating['ID'] ?>_<?=$i?>">
+															<?
+																if($criteriaRating['TOOLTIPS'][$i])
+																	echo $criteriaRating['TOOLTIPS'][$i]
+															?>
+                                                            <?//= $criteriaRating['TOOLTIPS'][$i] ?? $criteriaRating['TOOLTIP'] ?>
                                                         </div>
                                                     <? } ?>
                                                 </div>

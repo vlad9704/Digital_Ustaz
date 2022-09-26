@@ -58,13 +58,13 @@ $APPLICATION->SetAdditionalCSS('/local/templates/ustaz/css/ion.rangeSlider.css')
                                                 . <?= $criteriaRating['NAME'] ?>:
                                             </div>
                                             <div class="quest-card__form-block">
-                                                <input data-oldvalue="<?= $criteriaRating['RATING'] ?>"
-                                                       name="rating[<?= $criteriaRating['ID'] ?>]"
-                                                       value="1" class="rang-slider"
-                                                       type="text" data-step="1"
-                                                       data-max="<?= $criteriaRating['MAX_POINTS'] ?>" data-min="0"
-                                                       data-from="0" data-grid="true"
-                                                       data-skin="round" data-grid-num="5">
+												<input data-oldvalue="<?= $criteriaRating['RATING'] ?>"
+													   name="rating[<?= $criteriaRating['ID'] ?>]"
+													   value="<?= $criteriaRating['RATING'] ?>" class="rang-slider"
+													   type="text" data-step="1"
+													   data-max="<?= $criteriaRating['MAX_POINTS'] ?>" data-min="0"
+													   data-from="<?= $criteriaRating['RATING'] ?>" data-grid="true"
+													   data-skin="round" data-grid-num="5">
                                                 <?php for ($i = 0; $i <= $criteriaRating['MAX_POINTS']; $i++){ ?>
                                                     <div class="<?=$i?> tooltip quest-card__tooltip quest-card__tooltip-<?=$i?>"
                                                          data-tooltip-content="#tooltip_content_<?= $criteriaRating['ID'] ?>_<?=$i?>"></div>

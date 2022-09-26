@@ -86,7 +86,7 @@ while ($criterion = $criteriaRes->GetNextElement()) {
     $criteria[$fields['ID']] = array_merge($fields, $properties);
 }
 
-$siteUrl = 'https://digitalustazalmaty.kz/';
+$siteUrl = 'https://almatyustazy.kz/';
 
 ?>
 <html lang="ru">

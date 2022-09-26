@@ -2,7 +2,7 @@
 $MESS["USER_COMPETITION_STAGE1_NAME"] = '1 этап';
 $MESS["USER_COMPETITION_STAGE1_TITLE"] = 'Разработка "мультимедийной статьи на тему : " Моя философия обучения"';
 $MESS["USER_COMPETITION_STAGE1_TEXT"] = 'Пожалуйста, разместите ссылку на разработанную статью. Убедитесь, что ссылка является открытой (доступной для прочтения).';
-$MESS["USER_COMPETITION_STAGE2_NAME"] = '2 этап';
+$MESS["USER_COMPETITION_STAGE2_NAME"] = 'II этап - Проведение конкурсного урока "Учитель - профессионал"';
 $MESS["USER_COMPETITION_STAGE2_TITLE"] = 'Разработка урока с использованием цифровых инструментов';
 $MESS["USER_COMPETITION_STAGE2_TEXT"] = 'Пожалуйста, разместите ссылку на разработанный урок. Убедитесь, что ссылка является открытой (доступной для прочтения).';
 $MESS["USER_COMPETITION_STAGE3_NAME"] = '3 этап';

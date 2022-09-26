@@ -126,3 +126,9 @@ $arResult['criteria'] = $criteria;
 $arResult['criterionMaxRating'] = 15;//$criterionMaxRating;
 $arResult['downloadCert'] = CIBlockElement::GetList([], ['IBLOCK_ID' => IBLOCK_COMPETITION_WORKS, 'PROPERTY_competition_user_id' => $userId])->SelectedRowsCount();
 
+$el_res = CIBlockElement::GetList([], ['IBLOCK_ID' => 30], false, false, ['ID', 'NAME', 'PROPERTY_RATING_BALL', 'PROPERTY_USER_MEMBER']);
+while($ob = $el_res->fetch())
+{
+	$arResult['USERS'][$ob['PROPERTY_USER_MEMBER_VALUE']] = $ob['PROPERTY_RATING_BALL_VALUE'];
+	$arResult['USERS_ID'][] = $ob['PROPERTY_USER_MEMBER_VALUE'];
+}

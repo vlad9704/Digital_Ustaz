@@ -21,8 +21,8 @@ $this->setFrameMode(true);
                 $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
                 ?>
                 <?
-                $imgBig = CFile::ResizeImageGet($arItem['DISPLAY_PROPERTIES']['stage_img_big']['FILE_VALUE']['ID'], ['width' => 380], BX_RESIZE_IMAGE_PROPORTIONAL, true);
-                
+                $imgBig = CFile::ResizeImageGet($arItem['DISPLAY_PROPERTIES']['stage_img_big']['FILE_VALUE']['ID'], ['width' => 191, 'height' => 191], BX_RESIZE_IMAGE_PROPORTIONAL, true);
+                $imgSmall = CFile::ResizeImageGet($arItem['DISPLAY_PROPERTIES']['stage_img_small']['FILE_VALUE']['ID'], ['width' => 108, 'height' => 108], BX_RESIZE_IMAGE_PROPORTIONAL, true);
                 ?>
                 <?
                 $i++;
@@ -32,17 +32,23 @@ $this->setFrameMode(true);
 			<div class="stage-block__img">
 			    <div class="stage-block__img--big">
 				<picture>
-				    <source media="(max-width: 1023px)" type="image/png" srcset="<?= INCLUDE_PATH ?>images/simple.png"><img class="lazyload img-responsive" data-src="<?=$imgBig['src']?>" alt="#" loading="lazy">
+				    <source media="(max-width: 900px)" type="image/png" srcset="<?= STATIC_PATH ?>images/simple.png"><img class="lazyload img-responsive" data-src="<?=$imgBig['src']?>" alt="#" loading="lazy">
+				</picture>
+			    </div>
+			    <div class="stage-block__img--small">
+				<picture>
+				    <source media="(max-width: 900px)" type="image/png" srcset="<?= STATIC_PATH ?>images/simple.png"><img class="lazyload img-responsive" data-src="/img_almaty_ustaz/stage_<?=$i?>.png" alt="#" loading="lazy"><?// Поменять на $imgSmall ?>
 				</picture>
 			    </div>
 			</div>
 			<div class="stage-block__head">
 			    <div class="stage-block__head--title"><?=$arItem['DISPLAY_PROPERTIES']['stage_head_title_' . SITE_ID]['VALUE'] ?></div>
-			    <div class="stage-block__head--format is-<?=$arItem['DISPLAY_PROPERTIES']['stage_head_format']['VALUE'] ?>"><?=$arItem['DISPLAY_PROPERTIES']['stage_head_format']['VALUE'] ?></div>
+			    <div class="stage-block__head--format is-online"><?=$arItem['DISPLAY_PROPERTIES']['stage_head_format']['VALUE'] ?></div>
 			</div>
 			<div class="stage-block__body">
 			    <?= html_entity_decode($arItem['DISPLAY_PROPERTIES']['stage_title_' . SITE_ID]['VALUE']) ?>
 			    <div class="stage-block__bottom"><?=$arItem['DISPLAY_PROPERTIES']['stage_description_' . SITE_ID]['VALUE'] ?></div>
+			    <div class="stage-block__icon"><img src="<? echo ($i != 3) ? "/img_almaty_ustaz/stages_load.svg" : "/img_almaty_ustaz/stages_star.svg";  ?>" alt="#"></div>
 			</div>
 		    </div>
 		</div>
